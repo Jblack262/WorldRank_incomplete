@@ -12,7 +12,7 @@
 
 .heading_flag {
   flex: 1;
-  margin-right: 16px;
+  margin-right: 16px;;
 }
 
 .heading_name,
@@ -47,6 +47,7 @@
   padding: 20px;
 
   text-align: center;
+  cursor: pointer;
 
   background-color: var(--background-color-light);
   border-radius: 8px;
@@ -65,24 +66,34 @@
 
 .name {
   flex: 4;
-  text-align: left;
+  display: grid;
+  align-items: center;
+  justify-content: start;
 }
 
 .population {
   flex: 4;
+  display: grid;
+  place-items: center;
 }
 
 .area {
   flex: 4;
+  display: grid;
+  place-items: center;
 }
 
 .gini {
   flex: 4;
+  display: grid;
+  place-items: center;
 }
 
 .flag {
-  flex: 1;
+  flex: 2;
   margin-right: 16px;
+  display: grid;
+  place-items: center
 }
 
 .flag img {

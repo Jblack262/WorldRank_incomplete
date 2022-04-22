@@ -112,10 +112,10 @@ const CountriesTable = ({ countries }) => {
 						</div>
 						<div className={styles.name}>{country.name}</div>
 						<div className={styles.population}>
-							{country.population}
+							{country.population.toLocaleString()}
 						</div>
-						<div className={styles.area}>{country.area || 0}</div>
-						<div className={styles.gini}>{country.gini || 0} %</div>
+						<div className={styles.area}>{country.area ? <p>{country.area.toLocaleString()} km<sup>2</sup></p> : <p>N/A</p>}</div>
+						<div className={styles.gini}>{country.gini ? `${country.gini} %` : 'N/A'}</div>
 					</div>
 				</Link>
 			))}

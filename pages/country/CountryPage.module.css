@@ -1,0 +1,103 @@
+.countryContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+/*country card*/
+.countryCard {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-secondary);
+  max-width: 350px;
+  height: max-content;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.countryCard img {
+  border-radius: 0.33rem;
+  display: block;
+  max-width: 100%;
+}
+.countryCard h1 {
+  font-size: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+.countryCard p {
+  text-align: center;
+  margin: 0;
+}
+.countryCard .countryInfo {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem auto;
+  max-width: 350px;
+}
+.countryCard .countryInfo div {
+  text-align: center;
+}
+
+/*details card*/
+.detailsCard {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-secondary);
+  width: 100%;
+  /* padding: 1rem; */
+  border-radius: 0.5rem;
+}
+.detailsCard p {
+  margin: 1rem;
+}
+.detailsCard .detail:first-of-type {
+  border-top: 2px solid var(--background-color);
+}
+.detailsCard .detail {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--background-color);
+}
+.detailsCard .countryFlags {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 1rem; */
+}
+.detailsCard .neighborCountry {
+  max-width: 25%;
+  padding: .5rem;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.detailsCard .neighborCountry img {
+  max-width: 100%;
+  display: block;
+  border-radius: .33rem;
+  width: 100%;
+}
+.detailsCard .neighborCountry p {
+  margin: .5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .countryContainer {
+    flex-direction: column;
+  }
+  .detailsCard .neighborCountry {
+    max-width: 33%;
+  }
+  .countryCard {
+    width: 100%;
+    max-width: 100%;
+  }
+  .countryCard img {
+    max-width: 500px;
+    margin-inline: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .detailsCard .neighborCountry {
+    max-width: 50%;
+  }
+  .countryCard img {
+    max-width: 100%;
+  }
+}
